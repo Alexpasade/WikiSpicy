@@ -1,0 +1,6 @@
+<div class="container">
+    <agm-map (mouseout)="handleMouseOut()" (click)='handleClick()' [latitude]="myLat" [longitude]="myLng" [zoom]="zoom" [gestureHandling]="habilitarMap">
+    <agm-marker [title]="'YO'" [latitude]="myLat" [longitude]="myLng"></agm-marker>
+    <div *ngFor="let restaurante of arrayRestaurantes" ><agm-marker [title]="restaurante.nombre" [latitude]="restaurante.lat" [longitude]="restaurante.lng"></agm-marker></div>
+  </agm-map>
+</div>

@@ -1,0 +1,13 @@
+<div class="article-list">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Recetas</h2>
+            <p class="text-center">Aquí tienes nuestras maravillosas recetas y las recetas subidas por nuestros queridos usuarios.</p>
+        </div>
+        <div class="row articles">
+            <div *ngFor="let receta of arrayRecetas" class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src={{receta.imagen}}></a>
+                <h3 class="name">{{receta.nombre}}</h3>
+                <p class="description">{{receta.descripcion}}</p><a href="#" class="action"><i class="fa fa-arrow-circle-right"></i></a></div>
+</div>
+</div>
+</div>

@@ -1,0 +1,21 @@
+<header>
+    <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
+        <div class="container"><a class="navbar-brand" href="#"><span><img src="assets/img/logo.png"></span> </a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon" style="color:#df4c40;background-color:#d22525;"></span></button>
+            <div
+                class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav nav-right">
+                    <li class="nav-item" role="presentation"><a [routerLink]="['home']" class="nav-link active" style="color:#f2f5f8;">Home</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" style="color:#ffffff;">Qué es</a>
+                        <div class="dropdown-menu" role="menu"><a [routerLink]="['info']" class="dropdown-item" role="presentation" href="services.html" style="color:#ffffff;">Qué es</a><a [routerLink]="['creador']" class="dropdown-item" role="presentation" href="#" style="color:#ffffff;">Creador</a></div>
+                    </li>
+                    <li class="nav-item" role="presentation"><a [routerLink]="['recetas']" class="nav-link" style="color:#ffffff;">Recetas</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" style="color:#ffffff;">Restaurantes</a>
+                        <div class="dropdown-menu" role="menu"><a [routerLink]="['mapa']" class="dropdown-item" role="presentation" href="services.html" style="color:#ffffff;">Mapa</a><a [routerLink]="['listado']" class="dropdown-item" role="presentation" href="#" style="color:#ffffff;">Listado</a><a class="dropdown-item" role="presentation"
+                                href="#" style="color:#ffffff;">Tiendas</a></div>
+                    </li>
+                </ul>
+                <p class="ml-auto navbar-text actions"><a [routerLink]="['login']" class="login">Log In</a> <a [routerLink]="['registro']" class="btn btn-light action-button" role="button" style="color:#ffffff;">Sign Up</a></p>
+        </div>
+        </div>
+    </nav>
+</header>
