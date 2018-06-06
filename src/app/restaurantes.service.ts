@@ -10,6 +10,6 @@ export class RestaurantesService {
   constructor(private http: Http) { }
 
   getAllRestaurantes(){
-    return this.http.get('https://wikispicy.firebaseio.com/restaurantes.json').toPromise()
+    return this.http.get('http://localhost:3000/api/restaurantes').toPromise()
   }
 }

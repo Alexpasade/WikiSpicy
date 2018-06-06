@@ -1,0 +1,15 @@
+<div class="article-list">
+    <div class="container">
+        <div class="intro">
+            <h2 class="text-center">Restaurantes</h2>
+            <p class="text-center">Aquí tienes un listado de nuestros restaurantes favoritos.</p>
+        </div>
+        <div class="row articles">
+            <div *ngFor="let restaurante of arrayRestaurantes"  class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src={{restaurante.foto}}></a>
+                <h3 class="name">{{restaurante.nombre}}</h3>
+                <p class="description">{{restaurante.descripcion}}</p>
+                <p class="description direccion">{{restaurante.direccion}}</p>
+            </div>
+        </div>
+    </div>
+</div>
