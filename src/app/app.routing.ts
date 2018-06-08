@@ -17,7 +17,7 @@ export const appRoutes: Routes =[
     {path: 'home', component: HomeComponent},
     {path: 'recetas', component: RecetasComponent},
     {path: 'login', component: LogInComponent},
-    {path: 'perfil', component: UsuariosComponent },
+    {path: 'perfil/:nombre', component: UsuariosComponent },
     {path: 'restaurantes', component: RestaurantesComponent},
     {path: 'info', component: CorporativoComponent},
     {path: 'registro', component: RegistroUsuariosComponent},

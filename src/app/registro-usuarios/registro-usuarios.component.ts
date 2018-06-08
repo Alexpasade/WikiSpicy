@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Http } from '@angular/http';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-registro-usuarios',
@@ -11,7 +13,7 @@ export class RegistroUsuariosComponent implements OnInit {
 
   form: FormGroup;
 
-  constructor(private routes: Router) { }
+  constructor(private routes: Router, private http: Http, private usuariosService: UsuariosService) { }
 
   handleUsuarios(){
     this.routes.navigate(['perfil'])
@@ -30,6 +32,9 @@ export class RegistroUsuariosComponent implements OnInit {
     })
   }
   onSubmit(value){
+    
+    this.usuariosService.createUsuarios(value)
+    this.routes.navigate([`perfil/${value.nombre}`])
     
   }
 
