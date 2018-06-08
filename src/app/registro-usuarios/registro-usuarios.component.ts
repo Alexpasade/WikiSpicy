@@ -25,10 +25,12 @@ export class RegistroUsuariosComponent implements OnInit {
       email: new FormControl('', [ Validators.pattern('[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}'),
        Validators.required]),
       password: new FormControl('', Validators.required),
-      password1: new FormControl('', Validators.required),
       terminos: new FormControl('', Validators.required)
       
     })
+  }
+  onSubmit(value){
+    
   }
 
 }

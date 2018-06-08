@@ -1,8 +1,11 @@
+
+
 .header-blue {
-  background:linear-gradient(135deg, #172a74, #21a9af);
-  background-color:#184e8e;
+  background-image: linear-gradient(to right, rgb(17,11,3) 0%,rgb(17,11,3) 17%,rgb(214,130,115) 100%) 0% transparent; 
+  background-image:url('../img/foto3.jpg'); 
   padding-bottom:80px;
   font-family:'Source Sans Pro', sans-serif;
+  background-size: cover;
 }
 
 @media (min-width:768px) {
