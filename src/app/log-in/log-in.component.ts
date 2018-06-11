@@ -1,6 +1,7 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UsuariosService } from '../usuarios.service';
 
 @Component({
   selector: 'app-log-in',
@@ -10,11 +11,24 @@ import { Router } from '@angular/router';
 export class LogInComponent implements OnInit {
 
   form: FormGroup;
+  usuario: any;
+  falloLogin: number;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private usuariosService: UsuariosService) {}
 
-  handleUsuarios(){
-    this.router.navigate(['perfil'])
+  onSubmit(value){
+    this.usuariosService.getUsuario(value).then((res) => { 
+      this.usuario = (res.json())
+      if (this.usuario === "falloMail") {
+        this.falloLogin = 0
+      }else if (this.usuario === "falloPassword"){
+        this.falloLogin = 1
+      }else if (this.usuario[0].nombre){
+        this.router.navigate([`perfil/${this.usuario[0].nombre}`])
+        localStorage.setItem('usr', this.usuario[0].id)
+      }
+      
+    })
   }
 
   ngOnInit() {

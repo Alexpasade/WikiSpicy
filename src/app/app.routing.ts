@@ -25,6 +25,7 @@ export const appRoutes: Routes =[
     {path: 'listado', component: RestaurantesComponent},
     {path: 'creador', component: CreadorComponent},
     {path: 'info/creador',component: CreadorComponent},
+    {path: 'registro/login', component: LogInComponent},
     {path: '**', component: HomeComponent}
     
 ]

@@ -12,13 +12,14 @@ import { UsuariosService } from '../usuarios.service';
 export class RegistroUsuariosComponent implements OnInit {
 
   form: FormGroup;
+  registro: any;
+  registroFallo: boolean
+  email: any;
+  usuario:any
 
-  constructor(private routes: Router, private http: Http, private usuariosService: UsuariosService) { }
-
-  handleUsuarios(){
-    this.routes.navigate(['perfil'])
+  constructor(private router: Router, private http: Http, private usuariosService: UsuariosService) { 
+    this.registroFallo = false
   }
-
   ngOnInit() {
     this.form = new FormGroup({
       nombre: new FormControl('', Validators.required),
@@ -33,9 +34,15 @@ export class RegistroUsuariosComponent implements OnInit {
   }
   onSubmit(value){
     
-    this.usuariosService.createUsuarios(value)
-    this.routes.navigate([`perfil/${value.nombre}`])
-    
+    this.usuariosService.checkEmail(value).then((res) => {
+      if(res.json().mensaje){
+        this.usuariosService.createUsuarios(value).then((res) => {
+          this.router.navigate([`perfil/${value.nombre}`])
+        })   
+    }else{
+        this.registroFallo = true
+        
+      }
+    })
   }
-
 }
