@@ -1,3 +1,4 @@
+import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { CreadorComponent } from './creador/creador.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { LogInComponent } from './log-in/log-in.component';
@@ -21,6 +22,7 @@ export const appRoutes: Routes =[
     {path: 'restaurantes', component: RestaurantesComponent},
     {path: 'info', component: CorporativoComponent},
     {path: 'registro', component: RegistroUsuariosComponent},
+    {path: 'bienvenida', component: BienvenidaComponent},
     {path: 'mapa', component: MapaComponent},
     {path: 'listado', component: RestaurantesComponent},
     {path: 'creador', component: CreadorComponent},

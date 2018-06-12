@@ -37,7 +37,7 @@ export class RegistroUsuariosComponent implements OnInit {
     this.usuariosService.checkEmail(value).then((res) => {
       if(res.json().mensaje){
         this.usuariosService.createUsuarios(value).then((res) => {
-          this.router.navigate([`perfil/${value.nombre}`])
+          this.router.navigate(['bienvenida'])
         })   
     }else{
         this.registroFallo = true

@@ -3,3 +3,11 @@ img{
     width: 300px;
 
 }
+
+.intro h2,p{
+    color: aliceblue;
+}
+
+.row h3{
+    color: papayawhip
+}
