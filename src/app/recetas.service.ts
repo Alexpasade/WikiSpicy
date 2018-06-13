@@ -13,4 +13,15 @@ export class RecetasService {
   getAllRecipes(){
     return this.http.get('http://localhost:3000/api/recetas').toPromise()
   }
+
+  crarReceta(values){
+    let url ='http://localhost:3000/api/recetas/insertarreceta'
+    return this.http.post(url, {
+
+      nombre: values.nombre,
+      descripcion: values.descripcion,
+      receta: values.receta
+
+    }).toPromise()
+  }
 }

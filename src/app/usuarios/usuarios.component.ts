@@ -26,4 +26,8 @@ export class UsuariosComponent implements OnInit {
 
   }
 
+  formRecetas(){
+    this.router.navigate(['subirRecetas'])
+  }
+
 }

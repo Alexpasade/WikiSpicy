@@ -9,6 +9,7 @@ import { UsuariosComponent } from './usuarios/usuarios.component';
 import {Routes, RouterModule} from '@angular/router';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { RegistroUsuariosComponent } from './registro-usuarios/registro-usuarios.component';
+import { SubirRecetaComponent } from './subir-receta/subir-receta.component';
 
 
 
@@ -28,6 +29,7 @@ export const appRoutes: Routes =[
     {path: 'creador', component: CreadorComponent},
     {path: 'info/creador',component: CreadorComponent},
     {path: 'registro/login', component: LogInComponent},
+    {path: 'subirRecetas', component: SubirRecetaComponent},
     {path: '**', component: HomeComponent}
     
 ]

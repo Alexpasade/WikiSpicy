@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MapaComponent } from './mapa/mapa.component';
 import { CreadorComponent } from './creador/creador.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
+import { SubirRecetaComponent } from './subir-receta/subir-receta.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BienvenidaComponent } from './bienvenida/bienvenida.component';
     MapaComponent,
     CreadorComponent,
     BienvenidaComponent,
+    SubirRecetaComponent,
     
   ],
   imports: [
