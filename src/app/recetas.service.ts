@@ -20,7 +20,17 @@ export class RecetasService {
 
       nombre: values.nombre,
       descripcion: values.descripcion,
-      receta: values.receta
+      receta: values.receta,
+      ingredientes: values.ingredientes
+
+    }).toPromise()
+  }
+
+  getRecetaById(value){
+    let url ='http://localhost:3000/api/recetas/getreceta'
+    return this.http.post(url, {
+
+      id:value
 
     }).toPromise()
   }

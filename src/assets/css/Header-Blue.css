@@ -1,7 +1,6 @@
 
 
-.header-blue {
-  background-image: linear-gradient(to right, rgb(17,11,3) 0%,rgb(17,11,3) 17%,rgb(214,130,115) 100%) 0% transparent; 
+.header-blue { 
   background-image:url('../img/foto3.jpg'); 
   padding-bottom:80px;
   font-family:'Source Sans Pro', sans-serif;

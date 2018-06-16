@@ -1,3 +1,6 @@
+import { OpinionesRestaurantesComponent } from './opiniones-restaurantes/opiniones-restaurantes.component';
+import { ShowRestauranteComponent } from './show-restaurante/show-restaurante.component';
+import { ShowRecetaComponent } from './show-receta/show-receta.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { CreadorComponent } from './creador/creador.component';
 import { MapaComponent } from './mapa/mapa.component';
@@ -19,8 +22,11 @@ export const appRoutes: Routes =[
     {path: 'home', component: HomeComponent},
     {path: 'recetas', component: RecetasComponent},
     {path: 'login', component: LogInComponent},
+    {path: 'perfil', component: UsuariosComponent},
     {path: 'perfil/:nombre', component: UsuariosComponent },
     {path: 'restaurantes', component: RestaurantesComponent},
+    {path: 'recetas/:id',component: ShowRecetaComponent},
+    {path: 'restaurantes/:id', component: ShowRestauranteComponent},
     {path: 'info', component: CorporativoComponent},
     {path: 'registro', component: RegistroUsuariosComponent},
     {path: 'bienvenida', component: BienvenidaComponent},
@@ -29,6 +35,7 @@ export const appRoutes: Routes =[
     {path: 'creador', component: CreadorComponent},
     {path: 'info/creador',component: CreadorComponent},
     {path: 'registro/login', component: LogInComponent},
+    {path: 'opiniones/:id', component: OpinionesRestaurantesComponent},
     {path: 'subirRecetas', component: SubirRecetaComponent},
     {path: '**', component: HomeComponent}
     

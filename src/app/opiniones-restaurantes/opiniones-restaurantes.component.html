@@ -1,0 +1,26 @@
+
+<section class="td-form">
+  <div class="row td-form-wrapper">
+      <div class="col td-glass">
+          <form novalidate
+          [formGroup]="form" 
+          (ngSubmit)="onSubmit(form.value)"
+          method="post" class="td-form-wrapper">
+              <h1 class="text-center">Opina sobre el restaurante</h1>
+              <div class="form-group">
+                  <div class="col-md-12"><label for="name">Nombre</label>
+                      <div class="d-flex"><input formControlName="nombre" class="form-control d-flex" type="text" name="name" required="" placeholder="Nombre" autocomplete="off"></div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-12"><label for="message">Opiniones</label>
+                      <div class="d-flex td-input-container"><textarea formControlName="opinion" class="form-control" rows="6" cols="50" name="message" placeholder="Escribe aquí tu opinion sobre el restaurante"></textarea></div>
+                  </div>
+              </div>
+              <div class="form-group">
+                  <div class="col-md-12"><button class="btn btn-dark float-right" type="submit">Subir mi opinion</button></div>
+              </div>
+          </form>
+      </div>
+  </div>
+  </section>

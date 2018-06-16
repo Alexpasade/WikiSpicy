@@ -1,0 +1,36 @@
+
+<div class="article-clean">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
+            <div class="intro">
+                <h1 class="text-center">{{restaurante?.nombre}}</h1>
+                <p class="text-center"> </p><img class="img-fluid" src={{restaurante?.foto}}></div>
+            <div class="text">
+                <p>{{restaurante?.descripcion}}</p>
+                <p>{{restaurante?.direccion}}</p>
+                <figure></figure>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="testimonials-clean">
+<div class="container">
+    <div class="intro">
+        <h2 class="text-center">Opiniones</h2>
+        <p class="text-center">Nuestros Usuarios nos ayudan a valorar con sus opiniones los restaurantes que te proponemos en nuestra página web.</p>
+    </div>
+    <div class="row people">
+        <div *ngFor="let opinion of opiniones" class="col-md-6 col-lg-4 item">
+            <div class="box">
+                <p class="description">{{opinion.opinion}}</p>
+            </div>
+            <div class="author"><img class="rounded-circle" src="assets/img/1.jpg">
+                <h5 class="name">{{opinion.nombre}}</h5>
+            </div>
+        </div>
+        <div *ngIf=" userId > 0" (click)="handleClick(restaurante?.id)" class="col"><button type="button" class="btn-outline-success">Subir Opinion</button></div>
+    </div>
+</div>
+</div>

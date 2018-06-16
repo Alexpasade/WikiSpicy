@@ -21,6 +21,10 @@ import { MapaComponent } from './mapa/mapa.component';
 import { CreadorComponent } from './creador/creador.component';
 import { BienvenidaComponent } from './bienvenida/bienvenida.component';
 import { SubirRecetaComponent } from './subir-receta/subir-receta.component';
+import { ShowRecetaComponent } from './show-receta/show-receta.component';
+import { ImageUploadModule } from "angular2-image-upload";
+import { ShowRestauranteComponent } from './show-restaurante/show-restaurante.component';
+import { OpinionesRestaurantesComponent } from './opiniones-restaurantes/opiniones-restaurantes.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +43,10 @@ import { SubirRecetaComponent } from './subir-receta/subir-receta.component';
     CreadorComponent,
     BienvenidaComponent,
     SubirRecetaComponent,
+    ShowRecetaComponent,
+    ShowRestauranteComponent,
+    OpinionesRestaurantesComponent,
+    
     
   ],
   imports: [
@@ -46,6 +54,7 @@ import { SubirRecetaComponent } from './subir-receta/subir-receta.component';
     RouterModule.forRoot(appRoutes),
     HttpModule,
     FormsModule,
+    ImageUploadModule.forRoot(),
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBWPztwqcUu4T6nJ78V3CTYEDEUMaIZCSI'

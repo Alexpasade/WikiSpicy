@@ -1,4 +1,3 @@
-import { UsuariosService } from './../usuarios.service';
 import { Http } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -19,7 +18,8 @@ export class SubirRecetaComponent implements OnInit {
     this.form = new FormGroup({
     nombre: new FormControl('', Validators.required),
     descripcion: new FormControl('', Validators.required),
-    receta: new FormControl('', Validators.required)
+    receta: new FormControl('', Validators.required),
+    ingredientes: new FormControl('', Validators.required)
     })
   }
   onSubmit(values){

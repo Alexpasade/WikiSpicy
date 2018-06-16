@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RecetasService } from '../recetas.service';
+import { Router} from '@angular/router';
 
 @Component({
   selector: 'app-recetas',
@@ -11,7 +12,7 @@ export class RecetasComponent implements OnInit {
 
   arrayRecetas: any[];
 
-  constructor(private recetasService: RecetasService) { }
+  constructor(private recetasService: RecetasService, private router: Router) { }
 
   ngOnInit() {
 
@@ -20,4 +21,8 @@ export class RecetasComponent implements OnInit {
     })
   }
 
+  handleClick(id){
+    this.router.navigate(['/recetas',id])
+  
+  }
 }
