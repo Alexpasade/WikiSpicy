@@ -1,3 +1,6 @@
 .error p {
     color: crimson
 }
+button{
+    cursor: pointer;
+}

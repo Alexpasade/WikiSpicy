@@ -160,6 +160,15 @@
 a.navbar-brand.navbar-link {
   font-weight:400;
 }
+.container a.navbar-brand{
+  height: 100px;
+}
+.container a.navbar-brand span img{
+  height: auto;
+  width: 157px;
+  position: relative;
+  top: -35px;
+}
 
 p.navbar-text.navbar-right.actions {
   font-family:'Roboto Slab';
@@ -195,4 +204,5 @@ a.dropdown-item:hover{
 a.dropdown-toggle{
   cursor: pointer;
 }
+
 
