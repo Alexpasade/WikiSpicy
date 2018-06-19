@@ -41,4 +41,24 @@ export class RestaurantesService {
 
     }).toPromise()
   }
+
+  getAllTiendas(){
+    return this.http.get('http://localhost:3000/api/restaurantes/tiendas').toPromise()
+  }
+
+  getTiendaById(value){
+    let url = 'http://localhost:3000/api/restaurantes/gettienda'
+    return this.http.post(url, {
+      id:value
+    }).toPromise()
+  }
+  setRestaurantFavorite(user_id, rest_id){
+    let url ='http://localhost:3000/api/restaurantes/favoritos'
+    return this.http.post(url, {
+      
+      user_id: user_id,
+      rest_id: rest_id
+      
+    }).toPromise()
+  }
 }

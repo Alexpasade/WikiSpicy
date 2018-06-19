@@ -35,4 +35,12 @@ export class ShowRestauranteComponent implements OnInit {
   handleClick(id){
     this.router.navigate(['opiniones',id])
   }
+
+  handleFavorito(){
+
+    this.restaurantesService.setRestaurantFavorite(this.userId, this.idRestaurante).then((res) => {
+      console.log(res.json())
+    })
+
+  }
 }

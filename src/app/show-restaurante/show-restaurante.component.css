@@ -1,0 +1,16 @@
+.text p img {
+    width: 25px;
+    position: relative;
+    top: -6px;
+    left: 6px;
+}
+
+ .btn {
+
+    border-radius: 0;
+    position: relative;
+    bottom: 5px;
+    background-color: #f14a4f;
+    
+  }
+

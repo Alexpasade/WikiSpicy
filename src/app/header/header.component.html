@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-light navbar-expand-md navbar-fixed-top navigation-clean-button">
-        <div class="container"><a class="navbar-brand" [routerLink]="['home']"><span><img src="assets/img/logo.png"></span> </a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon" style="color:#df4c40;background-color:#d22525;"></span></button>
+        <div class="container"><a class="navbar-brand" [routerLink]="['home']"><span><img src="assets/img/logo.png"></span> </a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon" style="color:#f14a4f;background-color:#f14a4f;"></span></button>
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav nav-right">
@@ -11,7 +11,7 @@
                     <li class="nav-item" role="presentation"><a [routerLink]="['recetas']" class="nav-link" style="color:#ffffff;">Recetas</a></li>
                     <li class="dropdown"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" style="color:#ffffff;">Restaurantes</a>
                         <div class="dropdown-menu" role="menu"><a [routerLink]="['mapa']" class="dropdown-item" role="presentation" href="services.html" style="color:#ffffff;">Mapa</a><a [routerLink]="['restaurantes']" class="dropdown-item" role="presentation" href="#" style="color:#ffffff;">Listado</a><a class="dropdown-item" role="presentation"
-                                href="#" style="color:#ffffff;">Tiendas</a></div>
+                                [routerLink]="['tiendas']" style="color:#ffffff;">Tiendas</a></div>
                     </li>
                 </ul>
                 <p class="ml-auto navbar-text actions"><a *ngIf="userId === 0" (click)="handleclick()" class="login">Log In</a><a *ngIf="userId > 0" (click)="handleclick()" class="login">Usuario</a><a [routerLink]="['registro']" class="btn btn-light action-button" role="button" style="color:#ffffff;">Sign Up</a></p>

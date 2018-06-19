@@ -8,8 +8,9 @@
                 <p class="text-center"> </p><img class="img-fluid" src={{restaurante?.foto}}></div>
             <div class="text">
                 <p>{{restaurante?.descripcion}}</p>
-                <p>{{restaurante?.direccion}}</p>
+                <p><a href="https://maps.google.com/?q={{restaurante?.direccion}}">{{restaurante?.direccion}}</a><img src="../../assets/img/placeholder.svg" ></p>
                 <figure></figure>
+                <button (click)="handleFavorito()" *ngIf=" userId > 0" type="button" class="btn">Añadir a Favoritos</button>
             </div>
         </div>
     </div>

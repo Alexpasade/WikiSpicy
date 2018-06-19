@@ -13,6 +13,8 @@ import {Routes, RouterModule} from '@angular/router';
 import { RestaurantesComponent } from './restaurantes/restaurantes.component';
 import { RegistroUsuariosComponent } from './registro-usuarios/registro-usuarios.component';
 import { SubirRecetaComponent } from './subir-receta/subir-receta.component';
+import { TiendasComponent } from './tiendas/tiendas.component';
+import { ShowTiendaComponent } from './show-tienda/show-tienda.component';
 
 
 
@@ -25,6 +27,8 @@ export const appRoutes: Routes =[
     {path: 'perfil', component: UsuariosComponent},
     {path: 'perfil/:nombre', component: UsuariosComponent },
     {path: 'restaurantes', component: RestaurantesComponent},
+    {path: 'tiendas',component: TiendasComponent},
+    {path: 'tiendas/:id', component: ShowTiendaComponent},
     {path: 'recetas/:id',component: ShowRecetaComponent},
     {path: 'restaurantes/:id', component: ShowRestauranteComponent},
     {path: 'info', component: CorporativoComponent},

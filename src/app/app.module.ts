@@ -25,6 +25,9 @@ import { ShowRecetaComponent } from './show-receta/show-receta.component';
 import { ImageUploadModule } from "angular2-image-upload";
 import { ShowRestauranteComponent } from './show-restaurante/show-restaurante.component';
 import { OpinionesRestaurantesComponent } from './opiniones-restaurantes/opiniones-restaurantes.component';
+import { TiendasComponent } from './tiendas/tiendas.component';
+import { ShowTiendaComponent } from './show-tienda/show-tienda.component';
+import { RestaurantesFavoritosComponent } from './restaurantes-favoritos/restaurantes-favoritos.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +49,9 @@ import { OpinionesRestaurantesComponent } from './opiniones-restaurantes/opinion
     ShowRecetaComponent,
     ShowRestauranteComponent,
     OpinionesRestaurantesComponent,
+    TiendasComponent,
+    ShowTiendaComponent,
+    RestaurantesFavoritosComponent,
     
     
   ],

@@ -1,0 +1,6 @@
+.text p img {
+    width: 25px;
+    position: relative;
+    top: -6px;
+    left: 6px;
+}
