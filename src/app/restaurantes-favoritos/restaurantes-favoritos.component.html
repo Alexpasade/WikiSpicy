@@ -1,4 +1,3 @@
-
 <div class="article-list">
     <div class="container">
         <div class="intro">
@@ -6,9 +5,11 @@
             <p class="text-center">Aquí tienes una lista con tus restaurantes favoritos.</p>
         </div>
         <div class="row articles">
-            <div class="col-sm-6 col-md-4 item"><a href="#"><img class="img-fluid" src="assets/img/tandori.jpg"></a>
-                <h3 class="name">Article Title</h3>
-                <p class="description">Aenean tortor est, vulputate quis leo in, vehicula rhoncus lacus. Praesent aliquam in tellus eu gravida. Aliquam varius finibus est, interdum justo suscipit id.</p><a href="#" class="action"></a></div>
+            <div *ngFor="let restaurante of restaurantes" class="col-sm-6 col-md-4 item"><img (click)="handleClick(restaurante.id)" class="img-fluid" src={{restaurante.foto}}>
+                <h3 class="name">{{restaurante.nombre}}</h3>
+                <p class="description">{{restaurante.descripcion}}</p>
+                <p class="description direccion">{{restaurante.direccion}}</p>
+            </div>
         </div>
     </div>
 </div>

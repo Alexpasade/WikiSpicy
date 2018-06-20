@@ -61,4 +61,17 @@ export class RestaurantesService {
       
     }).toPromise()
   }
+  getFavoritesRestaurants(user_id){
+    let url ='http://localhost:3000/api/restaurantes/restaurantesfavoritos'
+    return this.http.post(url, {
+      user_id: user_id
+    }).toPromise()
+  }
+
+  getFavoritesRestaurantsById(user_id){
+    let url ='http://localhost:3000/api/restaurantes/restaurantesfavoritosbyid'
+    return this.http.post(url, {
+      user_id: user_id
+    }).toPromise()
+  }
 }

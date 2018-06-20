@@ -1,3 +1,4 @@
+import { RestaurantesFavoritosComponent } from './restaurantes-favoritos/restaurantes-favoritos.component';
 import { OpinionesRestaurantesComponent } from './opiniones-restaurantes/opiniones-restaurantes.component';
 import { ShowRestauranteComponent } from './show-restaurante/show-restaurante.component';
 import { ShowRecetaComponent } from './show-receta/show-receta.component';
@@ -25,10 +26,11 @@ export const appRoutes: Routes =[
     {path: 'recetas', component: RecetasComponent},
     {path: 'login', component: LogInComponent},
     {path: 'perfil', component: UsuariosComponent},
-    {path: 'perfil/:nombre', component: UsuariosComponent },
+    // {path: 'perfil/:nombre', component: UsuariosComponent },
     {path: 'restaurantes', component: RestaurantesComponent},
     {path: 'tiendas',component: TiendasComponent},
     {path: 'tiendas/:id', component: ShowTiendaComponent},
+    {path: 'perfil/favoritos',component: RestaurantesFavoritosComponent},
     {path: 'recetas/:id',component: ShowRecetaComponent},
     {path: 'restaurantes/:id', component: ShowRestauranteComponent},
     {path: 'info', component: CorporativoComponent},

@@ -12,16 +12,21 @@ export class ShowRestauranteComponent implements OnInit {
   
   restaurante: any[]
   userId: number
-  idRestaurante: number
+  idRestaurante: any
   opiniones: any[]
   usuario: any
+  favorito: any
+  restaurantesFavoritos: any
 
-  constructor(private restaurantesService: RestaurantesService, private activatedRoute: ActivatedRoute, private router: Router, private usuariosService: UsuariosService) { }
+  constructor(private restaurantesService: RestaurantesService, private activatedRoute: ActivatedRoute, private router: Router, private usuariosService: UsuariosService) {
+    this.favorito = 0
+    this.restaurantesFavoritos = []
+   }
 
   ngOnInit() {
-
+    this.restaurantesFavoritos = localStorage.getItem('rest_id')
     this.userId = Number(localStorage.getItem('usr'))
-    this.activatedRoute.params.subscribe( (params) =>{
+    this.activatedRoute.params.subscribe( (params) => {
       this.restaurantesService.getRestauranById(params.id).then((res) => {
         this.restaurante = res.json()
         this.idRestaurante = res.json().id
@@ -39,8 +44,7 @@ export class ShowRestauranteComponent implements OnInit {
   handleFavorito(){
 
     this.restaurantesService.setRestaurantFavorite(this.userId, this.idRestaurante).then((res) => {
-      console.log(res.json())
+      this.favorito = res.json()
     })
-
   }
 }
