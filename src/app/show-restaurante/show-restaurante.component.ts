@@ -19,8 +19,9 @@ export class ShowRestauranteComponent implements OnInit {
   restaurantesFavoritos: any
 
   constructor(private restaurantesService: RestaurantesService, private activatedRoute: ActivatedRoute, private router: Router, private usuariosService: UsuariosService) {
-    this.favorito = 0
+
     this.restaurantesFavoritos = []
+    this.userId = 0
    }
 
   ngOnInit() {

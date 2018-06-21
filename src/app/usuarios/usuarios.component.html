@@ -9,9 +9,11 @@
         <h3 class="name">Nombre: {{usuario?.nombre}}</h3>
         <p class="title" style="font-size:20px;">Ciudad: {{usuario?.ciudad}}</p>
         <p class="description">Edad: {{usuario?.edad}}</p>
-        <div class="btn-group" role="group"><button (click)="formRecetas()" class="btn btn-primary" type="button">Subir Recetas</button> <button [routerLink]="['favoritos']" style="margin-left: 5px;" type="button" class="btn-primary">Restaurantes Favoritos</button></div><button (click)="logOut()" class="btn btn-primary"  type="button" style="margin-left:5px;background-color:rgb(224,19,19);">Log Out</button>
-        <p
-            class="description"></p>
+        <div class="btn-group" role="group">
+            <button (click)="formRecetas()" class="btn btn-primary" type="button">Subir Recetas</button> 
+            <button [routerLink]="['favoritos']" style="margin-left: 5px;" type="button" class="btn btn-primary">Restaurantes Favoritos</button>
+         </div>
+            <button (click)="logOut()" class="btn btn-primary"  type="button" style="margin-left:5px;background-color:rgb(224,19,19);">Log Out</button>
     </div>
 </div>
 </div>

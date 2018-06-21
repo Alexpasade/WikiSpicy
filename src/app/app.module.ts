@@ -28,6 +28,7 @@ import { OpinionesRestaurantesComponent } from './opiniones-restaurantes/opinion
 import { TiendasComponent } from './tiendas/tiendas.component';
 import { ShowTiendaComponent } from './show-tienda/show-tienda.component';
 import { RestaurantesFavoritosComponent } from './restaurantes-favoritos/restaurantes-favoritos.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { RestaurantesFavoritosComponent } from './restaurantes-favoritos/restaur
     TiendasComponent,
     ShowTiendaComponent,
     RestaurantesFavoritosComponent,
+    ChatbotComponent,
     
     
   ],

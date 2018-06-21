@@ -2,6 +2,7 @@ import { Receta } from './model/receta.model';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 
+let urlLocal = 'http://localhost:3000'
 
 @Injectable({
   providedIn: 'root'

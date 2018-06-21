@@ -16,6 +16,7 @@ import { RegistroUsuariosComponent } from './registro-usuarios/registro-usuarios
 import { SubirRecetaComponent } from './subir-receta/subir-receta.component';
 import { TiendasComponent } from './tiendas/tiendas.component';
 import { ShowTiendaComponent } from './show-tienda/show-tienda.component';
+import { ChatbotComponent } from './chatbot/chatbot.component';
 
 
 
@@ -26,7 +27,7 @@ export const appRoutes: Routes =[
     {path: 'recetas', component: RecetasComponent},
     {path: 'login', component: LogInComponent},
     {path: 'perfil', component: UsuariosComponent},
-    // {path: 'perfil/:nombre', component: UsuariosComponent },
+    {path: 'chatbot',component: ChatbotComponent},
     {path: 'restaurantes', component: RestaurantesComponent},
     {path: 'tiendas',component: TiendasComponent},
     {path: 'tiendas/:id', component: ShowTiendaComponent},

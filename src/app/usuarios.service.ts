@@ -2,6 +2,8 @@ import { Http } from '@angular/http';
 import { Usuario } from './model/usuario.model';
 import { Injectable } from '@angular/core';
 
+let urlLocal = 'http://localhost:3000'
+
 
 @Injectable({
   providedIn: 'root'

@@ -13,6 +13,7 @@
                         <div class="dropdown-menu" role="menu"><a [routerLink]="['mapa']" class="dropdown-item" role="presentation" href="services.html" style="color:#ffffff;">Mapa</a><a [routerLink]="['restaurantes']" class="dropdown-item" role="presentation" href="#" style="color:#ffffff;">Listado</a><a class="dropdown-item" role="presentation"
                                 [routerLink]="['tiendas']" style="color:#ffffff;">Tiendas</a></div>
                     </li>
+                    <li class="nav-item" role="presentation"><a [routerLink]="['chatbot']" class="nav-link" style="color:#ffffff;">ChatBot</a></li>
                 </ul>
                 <p class="ml-auto navbar-text actions"><a *ngIf="userId === 0" (click)="handleclick()" class="login">Log In</a><a *ngIf="userId > 0" (click)="handleclick()" class="login">Usuario</a><a [routerLink]="['registro']" class="btn btn-light action-button" role="button" style="color:#ffffff;">Sign Up</a></p>
         </div>
