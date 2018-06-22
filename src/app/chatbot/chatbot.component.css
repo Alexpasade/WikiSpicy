@@ -89,3 +89,25 @@ input:focus{
 :-moz-placeholder { /* Firefox 18- */
     color: #d4d4d4;
 } 
+
+
+.container{
+    margin-top: 150px;
+}
+
+.alert{
+    display: inline-block;
+}
+
+li{
+    margin-top: 30px;
+    list-style: none;
+}
+
+.col-sm-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 20%;
+    max-width: 400px;
+    margin: 0 auto;
+}

@@ -1,6 +1,16 @@
 <div class="col-sm-3 col-sm-offset-4 frame">
-    <ul>{{botMessage}}</ul>
-    <ul></ul>
+    <ul>
+        <li>
+        <div *ngIf="botMessage" class="alert alert-primary" role="alert">
+          {{botMessage}}
+        </div>
+      </li>
+      <li>
+        <div *ngIf="message"class="pull-right alert alert-warning text-right" role="alert">
+          {{message}}
+        </div>
+      </li></ul>
+    
     <div>
         <div class="msj-rta macro" style="margin:auto">                        
             <div class="text text-r" style="background:whitesmoke !important">

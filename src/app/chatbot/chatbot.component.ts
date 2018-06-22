@@ -1,5 +1,6 @@
 import { BotService } from './../bot.service';
 import { Component, OnInit } from '@angular/core';
+import {$} from 'jquery'
 
 
 @Component({
@@ -15,13 +16,14 @@ export class ChatbotComponent implements OnInit {
   constructor(private botService: BotService) { }
 
   ngOnInit() {
-
+  
   }
 
   handleKeypress($event){
     if($event.keyCode === 13) {
       this.botService.sendMessage(this.message).then((res) => {
           this.botMessage = res.json()
+        
       })
     }  
   }

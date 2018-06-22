@@ -17,11 +17,13 @@ export class ShowRestauranteComponent implements OnInit {
   usuario: any
   favorito: any
   restaurantesFavoritos: any
+  eliminado: any
 
   constructor(private restaurantesService: RestaurantesService, private activatedRoute: ActivatedRoute, private router: Router, private usuariosService: UsuariosService) {
 
     this.restaurantesFavoritos = []
     this.userId = 0
+
    }
 
   ngOnInit() {
@@ -46,6 +48,12 @@ export class ShowRestauranteComponent implements OnInit {
 
     this.restaurantesService.setRestaurantFavorite(this.userId, this.idRestaurante).then((res) => {
       this.favorito = res.json()
+    })
+  }
+
+  deleteFavorito(){
+    this.restaurantesService.deleteRestauranteFavorito(this.userId, this.idRestaurante).then((res) =>{
+      this.eliminado = res.json()
     })
   }
 }

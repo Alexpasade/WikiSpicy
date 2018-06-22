@@ -76,4 +76,14 @@ export class RestaurantesService {
       user_id: user_id
     }).toPromise()
   }
+
+  deleteRestauranteFavorito(user_id, rest_id){
+    let url ='http://localhost:3000/api/restaurantes/deleterestuarantefavorito'
+    return this.http.post(url, {
+
+      user_id: user_id,
+      rest_id: rest_id
+
+    }).toPromise()
+  }
 }
