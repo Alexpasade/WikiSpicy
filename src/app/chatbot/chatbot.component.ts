@@ -23,7 +23,7 @@ export class ChatbotComponent implements OnInit {
     if($event.keyCode === 13) {
       this.botService.sendMessage(this.message).then((res) => {
           this.botMessage = res.json()
-        
+          this.message = ""
       })
     }  
   }

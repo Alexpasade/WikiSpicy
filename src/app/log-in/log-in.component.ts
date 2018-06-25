@@ -23,7 +23,7 @@ export class LogInComponent implements OnInit {
   onSubmit(value){
     this.usuariosService.getUsuario(value).then((res) => { 
       this.usuario = res.json()
-      if (this.usuario === "falloMail") {
+      if (this.usuario === "falloMail"){
         this.falloLogin = 0
       }else if (this.usuario === "falloPassword"){
         this.falloLogin = 1

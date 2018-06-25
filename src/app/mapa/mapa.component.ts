@@ -14,6 +14,8 @@ import { SelectorListContext } from '@angular/compiler';
 export class MapaComponent implements OnInit {
   habilitarMap: string
 
+  contenString: any
+
   lat: number = 40.4169;
   lng: number = -3.7033;
   zoom: number = 15;

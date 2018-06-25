@@ -1,6 +1,12 @@
 <div class="container">
     <agm-map (mouseout)="handleMouseOut()" (click)='handleClick()' [latitude]="myLat" [longitude]="myLng" [zoom]="zoom" [gestureHandling]="habilitarMap">
     <agm-marker [title]="'YO'" [latitude]="myLat" [longitude]="myLng"></agm-marker>
-    <div *ngFor="let restaurante of arrayRestaurantes" ><agm-marker [title]="restaurante.nombre" [latitude]="restaurante.lat" [longitude]="restaurante.lng"></agm-marker></div>
+    <div *ngFor="let restaurante of arrayRestaurantes" ><agm-marker [title]="restaurante.nombre" [latitude]="restaurante.lat" [longitude]="restaurante.lng">
+      <agm-info-window>
+        <h3>{{restaurante?.nombre}}</h3>
+        <h5 style="color: #f14a4f">{{restaurante?.descripcion}}</h5>
+        <p><a href="https://maps.google.com/?q={{restaurante?.direccion}}" target="_blank">{{restaurante?.direccion}}</a></p>
+      </agm-info-window>
+    </agm-marker></div>
   </agm-map>
 </div>

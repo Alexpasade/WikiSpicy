@@ -22,7 +22,8 @@ export class RecetasService {
       nombre: values.nombre,
       descripcion: values.descripcion,
       receta: values.receta,
-      ingredientes: values.ingredientes
+      ingredientes: values.ingredientes,
+      imagen: values.imagen
 
     }).toPromise()
   }

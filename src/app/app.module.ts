@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -54,6 +55,7 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     ShowTiendaComponent,
     RestaurantesFavoritosComponent,
     ChatbotComponent,
+   
     
     
   ],
@@ -64,6 +66,7 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     FormsModule,
     ImageUploadModule.forRoot(),
     ReactiveFormsModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBWPztwqcUu4T6nJ78V3CTYEDEUMaIZCSI'
     })
