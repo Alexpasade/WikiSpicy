@@ -18,7 +18,7 @@ export class MapaComponent implements OnInit {
 
   lat: number = 40.4169;
   lng: number = -3.7033;
-  zoom: number = 15;
+  zoom: number = 15  ;
 
   myLat: number;
   myLng: number;

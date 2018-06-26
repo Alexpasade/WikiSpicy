@@ -2,9 +2,6 @@ import { Http } from '@angular/http';
 import { Usuario } from './model/usuario.model';
 import { Injectable } from '@angular/core';
 
-let urlLocal = 'http://localhost:3000'
-
-
 @Injectable({
   providedIn: 'root'
 })
@@ -14,7 +11,7 @@ export class UsuariosService {
 
   createUsuarios(values){
     
-    let url = 'http://localhost:3000/api/usuarios/crearusuario'
+    let url = 'https://backspicy.herokuapp.com/api/usuarios/crearusuario'
       return this.http.post(url,{
       nombre: values.nombre,
       ciudad: values.ciudad,
@@ -27,7 +24,7 @@ export class UsuariosService {
   }
 
   getUsuario(values){
-    let url = 'http://localhost:3000/api/usuarios/login'
+    let url = 'https://backspicy.herokuapp.com/api/usuarios/login'
     return this.http.post(url, {
 
       nombre: values.nombre,
@@ -41,7 +38,7 @@ export class UsuariosService {
   }
 
   checkEmail(values){
-    let url = 'http://localhost:3000/api/usuarios/email'
+    let url = 'https://backspicy.herokuapp.com/api/usuarios/email'
     return this.http.post(url, {
 
       nombre: values.nombre,
@@ -55,11 +52,21 @@ export class UsuariosService {
   }
 
   getUsuarioById(value){
-    let url ='http://localhost:3000/api/usuarios/usuario'
+    let url ='https://backspicy.herokuapp.com/api/usuarios/usuario'
     return this.http.post(url, {
 
     //Estos valores son los que le pasamos a la petición
       id: value
+
+    }).toPromise()
+  }
+
+  changePassword(values){
+    let url = 'https://backspicy.herokuapp.com/api/usuarios/changepassword'
+    return this.http.post(url, {
+
+      email: values.email,
+      password: values.password
 
     }).toPromise()
   }

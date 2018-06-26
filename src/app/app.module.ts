@@ -30,6 +30,8 @@ import { TiendasComponent } from './tiendas/tiendas.component';
 import { ShowTiendaComponent } from './show-tienda/show-tienda.component';
 import { RestaurantesFavoritosComponent } from './restaurantes-favoritos/restaurantes-favoritos.component';
 import { ChatbotComponent } from './chatbot/chatbot.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +57,8 @@ import { ChatbotComponent } from './chatbot/chatbot.component';
     ShowTiendaComponent,
     RestaurantesFavoritosComponent,
     ChatbotComponent,
+    PrivacyComponent,
+    ResetPasswordComponent,
    
     
     

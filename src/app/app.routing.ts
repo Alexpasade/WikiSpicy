@@ -1,3 +1,5 @@
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 import { RestaurantesFavoritosComponent } from './restaurantes-favoritos/restaurantes-favoritos.component';
 import { OpinionesRestaurantesComponent } from './opiniones-restaurantes/opiniones-restaurantes.component';
 import { ShowRestauranteComponent } from './show-restaurante/show-restaurante.component';
@@ -33,6 +35,8 @@ export const appRoutes: Routes =[
     {path: 'tiendas/:id', component: ShowTiendaComponent},
     {path: 'perfil/favoritos',component: RestaurantesFavoritosComponent},
     {path: 'recetas/:id',component: ShowRecetaComponent},
+    {path: 'login/reset', component: ResetPasswordComponent},
+    {path: 'privacy', component: PrivacyComponent},
     {path: 'restaurantes/:id', component: ShowRestauranteComponent},
     {path: 'info', component: CorporativoComponent},
     {path: 'registro', component: RegistroUsuariosComponent},

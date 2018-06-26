@@ -2,8 +2,6 @@ import { Http } from '@angular/http';
 import { Restaurante } from './model/restaurante.model';
 import { Injectable } from '@angular/core';
 
-let urlLocal = 'http://localhost:3000'
-
 @Injectable({
   providedIn: 'root'
 })
@@ -12,19 +10,19 @@ export class RestaurantesService {
   constructor(private http: Http) { }
 
   getAllRestaurantes(){
-    return this.http.get('http://localhost:3000/api/restaurantes').toPromise()
+    return this.http.get('https://backspicy.herokuapp.com/api/restaurantes').toPromise()
     
   }
 
   getRestauranById(value){
-    let url = 'http://localhost:3000/api/restaurantes/getrestaurante'
+    let url = 'https://backspicy.herokuapp.com/api/restaurantes/getrestaurante'
     return this.http.post(url, {
       id:value
     }).toPromise()
   }
 
   postOpinion(values){
-    let url ='http://localhost:3000/api/restaurantes/opinion'
+    let url ='https://backspicy.herokuapp.com/api/restaurantes/opinion'
     return this.http.post(url, {
       
       opinion: values.opinion,
@@ -35,7 +33,7 @@ export class RestaurantesService {
   }
 
   getOpinion(value){
-    let url = 'http://localhost:3000/api/restaurantes/opinionrest'
+    let url = 'https://backspicy.herokuapp.com/api/restaurantes/opinionrest'
     return this.http.post(url, {
 
       rest_id: value
@@ -45,17 +43,17 @@ export class RestaurantesService {
   }
 
   getAllTiendas(){
-    return this.http.get('http://localhost:3000/api/restaurantes/tiendas').toPromise()
+    return this.http.get('https://backspicy.herokuapp.com/api/restaurantes/tiendas').toPromise()
   }
 
   getTiendaById(value){
-    let url = 'http://localhost:3000/api/restaurantes/gettienda'
+    let url = 'https://backspicy.herokuapp.com/api/restaurantes/gettienda'
     return this.http.post(url, {
       id:value
     }).toPromise()
   }
   setRestaurantFavorite(user_id, rest_id){
-    let url ='http://localhost:3000/api/restaurantes/favoritos'
+    let url ='https://backspicy.herokuapp.com/api/restaurantes/favoritos'
     return this.http.post(url, {
       
       user_id: user_id,
@@ -64,21 +62,21 @@ export class RestaurantesService {
     }).toPromise()
   }
   getFavoritesRestaurants(user_id){
-    let url ='http://localhost:3000/api/restaurantes/restaurantesfavoritos'
+    let url ='https://backspicy.herokuapp.com/api/restaurantes/restaurantesfavoritos'
     return this.http.post(url, {
       user_id: user_id
     }).toPromise()
   }
 
   getFavoritesRestaurantsById(user_id){
-    let url ='http://localhost:3000/api/restaurantes/restaurantesfavoritosbyid'
+    let url ='https://backspicy.herokuapp.com/api/restaurantes/restaurantesfavoritosbyid'
     return this.http.post(url, {
       user_id: user_id
     }).toPromise()
   }
 
   deleteRestauranteFavorito(user_id, rest_id){
-    let url ='http://localhost:3000/api/restaurantes/deleterestuarantefavorito'
+    let url ='https://backspicy.herokuapp.com/api/restaurantes/deleterestuarantefavorito'
     return this.http.post(url, {
 
       user_id: user_id,
