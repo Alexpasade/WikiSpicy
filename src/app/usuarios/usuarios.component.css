@@ -7,3 +7,20 @@
     /* background-color: #0069d9; */
     border-color: #0062cc;
 }
+.subirimagen{
+    background: grey;
+    margin-top: -199px;
+    margin-left: 50px;
+    border-radius: 50%;
+    opacity: 0;
+    cursor: copy;
+    margin: 0 auto;
+    height: 164px;
+    position: absolute;
+    top: -163px;
+    left: 29%;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    width: 38%;
+}

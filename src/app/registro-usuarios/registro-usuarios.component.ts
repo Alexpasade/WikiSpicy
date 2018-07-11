@@ -21,6 +21,13 @@ export class RegistroUsuariosComponent implements OnInit {
     this.registroFallo = false
   }
   ngOnInit() {
+    
+    this.usuario = localStorage.getItem('usr')
+    
+    if(this.usuario > 0){
+      this.router.navigate(['perfil'])
+    }
+
     this.form = new FormGroup({
       nombre: new FormControl('', Validators.required),
       ciudad: new FormControl('', Validators.required),

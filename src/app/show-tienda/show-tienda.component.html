@@ -4,10 +4,14 @@
           <div class="col-lg-10 col-xl-8 offset-lg-1 offset-xl-2">
               <div class="intro">
                   <h1 class="text-center">{{tienda?.nombre}}</h1>
-                  <p class="text-center"> </p><img class="img-fluid" src={{tienda?.imagen}}></div>
+                  <p class="text-center"> </p><img class="img-fluid" src={{tienda?.imagen}}>
+                </div>
               <div class="text">
                   <p>{{tienda?.descripcion}}</p>
-                  <p><a href="https://maps.google.com/?q={{restaurante?.direccion}}">{{tienda?.direccion}}</a><img src="../../assets/img/placeholder.svg" ></p>
+                  <p>
+                    <a href="https://maps.google.com/?q={{restaurante?.direccion}}">{{tienda?.direccion}}</a>
+                    <img src="../../assets/img/placeholder.svg" >
+                  </p>
                   <figure></figure>
               </div>
           </div>

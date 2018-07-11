@@ -5,7 +5,8 @@
           <p class="text-center">Aquí tienes un listado de nuestras tiendas favoritas.</p>
       </div>
       <div class="row articles">
-          <div *ngFor="let tienda of arrayTiendas"  class="col-sm-6 col-md-4 item"><img (click)="handleClick(tienda.id)" class="img-fluid" src={{tienda.imagen}}>
+          <div *ngFor="let tienda of arrayTiendas"  class="col-sm-6 col-md-4 item">
+              <img (click)="handleClick(tienda.id)" class="img-fluid" src={{tienda.imagen}}>
               <h3 class="name">{{tienda.nombre}}</h3>
               <p class="description">{{tienda.descripcion}}</p>
               <p class="description direccion">{{tienda.direccion}}</p>

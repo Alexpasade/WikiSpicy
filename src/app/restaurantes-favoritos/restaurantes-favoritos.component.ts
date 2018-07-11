@@ -9,7 +9,7 @@ import { RestaurantesService } from '../restaurantes.service';
 })
 export class RestaurantesFavoritosComponent implements OnInit {
 
-  userId:number
+  userId: number
   restaurantes: any[]
 
   constructor(private resurantesService: RestaurantesService, private router: Router) { }

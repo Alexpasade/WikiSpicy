@@ -9,7 +9,7 @@
                 <p>{{restaurante?.descripcion}}</p>
                 <p><a href="https://maps.google.com/?q={{restaurante?.direccion}}" target="_blank">{{restaurante?.direccion}}</a><img src="../../assets/img/placeholder.svg" ></p>
                 <figure></figure>
-                <button (click)="handleFavorito()" *ngIf="userId > 0 && !restaurantesFavoritos.includes(idRestaurante) && !favorito && eliminado" type="button" class="btn">Añadir a Favoritos</button>
+                <button (click)="handleFavorito()" *ngIf="userId > 0 && !restaurantesFavoritos.includes(idRestaurante) && !favorito " type="button" class="btn">Añadir a Favoritos</button>
                 <button *ngIf="userId > 0 && restaurantesFavoritos.includes(idRestaurante) && !eliminado || favorito" type="button" class="btn">Restaurante Añadido</button>
                 <button *ngIf="eliminado" type="button" class="btn">Restaurante Eliminado</button>
                 <button (click)="deleteFavorito()" style="margin-left: 5px" *ngIf="userId > 0 && restaurantesFavoritos.includes(idRestaurante) &&!eliminado || favorito" type="button" class="btn">Eliminar Restaurante</button>

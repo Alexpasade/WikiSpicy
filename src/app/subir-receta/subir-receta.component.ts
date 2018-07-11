@@ -25,15 +25,7 @@ export class SubirRecetaComponent implements OnInit {
     ingredientes: new FormControl('', Validators.required)
     })
   }
-  // onSubmit(values){
-
-  //   this.recetasService.crarReceta(values).then((res) => {
-  //     if(res.json().success){
-  //       this.router.navigate(['recetas'])
-  //     }
-  //   })
-  // }
-
+  
   onSubmit(values){
     let fd = new FormData
     fd.append('nombre', values.nombre)
@@ -56,6 +48,7 @@ export class SubirRecetaComponent implements OnInit {
   }
 
   onFileChange($event){
-    this.files = $event.target.files;}
+    this.files = $event.target.files
+  }
 
 }

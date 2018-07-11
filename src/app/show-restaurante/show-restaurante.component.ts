@@ -13,7 +13,7 @@ export class ShowRestauranteComponent implements OnInit {
   restaurante: any[]
   userId: number
   idRestaurante: any
-  opiniones: any[]
+  opiniones: any
   usuario: any
   favorito: any
   restaurantesFavoritos: any

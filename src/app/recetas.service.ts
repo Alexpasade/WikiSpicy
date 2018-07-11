@@ -12,11 +12,11 @@ export class RecetasService {
   constructor(private http: Http) { }
 
   getAllRecipes(){
-    return this.http.get('https://backspicy.herokuapp.com/api/recetas').toPromise()
+    return this.http.get('http://localhost:3000/api/recetas').toPromise()
   }
 
   crarReceta(values){
-    let url ='https://backspicy.herokuapp.com/api/recetas/insertarreceta'
+    let url ='http://localhost:3000/api/recetas/insertarreceta'
     return this.http.post(url, {
 
       nombre: values.nombre,
@@ -29,7 +29,7 @@ export class RecetasService {
   }
 
   getRecetaById(value){
-    let url ='https://backspicy.herokuapp.com/api/recetas/getreceta'
+    let url ='http://localhost:3000/api/recetas/getreceta'
     return this.http.post(url, {
 
       id:value

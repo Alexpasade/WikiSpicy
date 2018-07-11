@@ -9,7 +9,7 @@ export class BotService {
   constructor(private http: Http) { }
 
   sendMessage(message){
-    let url = 'https://backspicy.herokuapp.com/api/bot'
+    let url = 'http://localhost:3000/api/bot'
     return this.http.post(url, {
 
         mensaje:message

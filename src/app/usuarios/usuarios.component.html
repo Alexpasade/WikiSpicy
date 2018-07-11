@@ -5,7 +5,19 @@
     <div class="intro">
         <h2 class="text-center">WikiSpicy</h2>
     </div>
-    <div class="col-md-12 col-lg-12 item" style="height:500px;"><img class="rounded-circle" src={{usuario?.imagen}}>
+    <div class="col-md-12 col-lg-12 item" style="height:500px;">
+        <div>
+        <img class="rounded-circle" src={{usuario?.imagen}}>
+        <div class="col-md-12"><label for="subject"></label>
+         <form novalidate
+         [formGroup]="form" 
+         (ngSubmit)="onSubmit(form.value)"
+          method="post">
+            <div class="d-flex td-input-container filecontainer">
+                <input formControlName="imagen" alt="" (change)="onFileChange($event)" class="subirimagen" type="file" name="subject" required="" autocomplete="off" placeholder="Foto de la receta">
+            </div>
+          </form>
+        </div>
         <h3 class="name">Nombre: {{usuario?.nombre}}</h3>
         <p class="title" style="font-size:20px;">Ciudad: {{usuario?.ciudad}}</p>
         <p class="description">Edad: {{usuario?.edad}}</p>

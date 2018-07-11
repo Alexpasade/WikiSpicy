@@ -24,6 +24,7 @@ export class ResetPasswordComponent implements OnInit {
       password: new FormControl('', Validators.required),
       password_repeat: new FormControl('',Validators.required)
     })
+
   }
 
   onSubmit(value){
@@ -36,11 +37,14 @@ export class ResetPasswordComponent implements OnInit {
          this.falloMail = 1
       }else if(value.password === value.password_repeat){
         this.usuariosService.changePassword(value).then((res) => {
-          alert('SE HA CAMBIADO EL PASSWORD')
-          this.router.navigate(['login'])
+
         })
       }
     })
+  }
+
+  handleClick(){
+    this.router.navigate(['login'])
   }
 }
 

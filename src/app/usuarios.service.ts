@@ -10,8 +10,7 @@ export class UsuariosService {
   constructor(private http: Http) { }
 
   createUsuarios(values){
-    
-    let url = 'https://backspicy.herokuapp.com/api/usuarios/crearusuario'
+    let url = 'http://localhost:3000/api/usuarios/crearusuario'
       return this.http.post(url,{
       nombre: values.nombre,
       ciudad: values.ciudad,
@@ -24,7 +23,7 @@ export class UsuariosService {
   }
 
   getUsuario(values){
-    let url = 'https://backspicy.herokuapp.com/api/usuarios/login'
+    let url = 'http://localhost:3000/api/usuarios/login'
     return this.http.post(url, {
 
       nombre: values.nombre,
@@ -38,7 +37,7 @@ export class UsuariosService {
   }
 
   checkEmail(values){
-    let url = 'https://backspicy.herokuapp.com/api/usuarios/email'
+    let url = 'http://localhost:3000/api/usuarios/email'
     return this.http.post(url, {
 
       nombre: values.nombre,
@@ -52,7 +51,7 @@ export class UsuariosService {
   }
 
   getUsuarioById(value){
-    let url ='https://backspicy.herokuapp.com/api/usuarios/usuario'
+    let url ='http://localhost:3000/api/usuarios/usuario'
     return this.http.post(url, {
 
     //Estos valores son los que le pasamos a la petición
@@ -62,7 +61,7 @@ export class UsuariosService {
   }
 
   changePassword(values){
-    let url = 'https://backspicy.herokuapp.com/api/usuarios/changepassword'
+    let url = 'http://localhost:3000/api/usuarios/changepassword'
     return this.http.post(url, {
 
       email: values.email,
@@ -70,4 +69,7 @@ export class UsuariosService {
 
     }).toPromise()
   }
+
 }
+
+
